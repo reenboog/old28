@@ -9,4 +9,9 @@
 #ifndef Constants_h
 #define Constants_h
 
+#define zMainBack 0
+#define zStatIcon 1
+
+#define kDecisionBtnLabelKey 123
+
 #endif
