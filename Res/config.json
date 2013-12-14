@@ -1,0 +1,35 @@
+{
+    "layoutBaseDimension": "height",
+    
+	"designResolutionEntries":
+    [
+        {
+            "width": 0,
+            "height": 0,
+            "designWidth": 640,
+            "designHeight": 960,
+            "paths": []
+        },
+     
+        {
+            "width": 1024,
+            "height": 600,
+            "designWidth": 1024,
+            "designHeight": 600,
+            "paths":
+            [
+                "Res/1024x600/fonts/",
+                "Res/1024x600/ui/",
+                "Res/1024x600/"
+            ]
+        }
+     ],
+                                
+    "sharedPaths":
+    [
+        "Res/shared/audio/",
+        "Res/shared/strings/",
+        "Res/shared/",
+        "Res/"
+    ]
+}
