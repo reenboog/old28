@@ -1,6 +1,7 @@
 #include "AppDelegate.h"
 #include "GameLayer.h"
 
+#include "Localized.h"
 #include "GameConfig.h"
 
 USING_NS_CC;
@@ -9,6 +10,7 @@ AppDelegate::~AppDelegate() {
     GameConfig::sharedInstance()->save();
     
     delete GameConfig::sharedInstance();
+    Localized::purge();
     
     //CC_SAFE_RELEASE(AppiraterManager::sharedInstance());
 }
@@ -27,6 +29,10 @@ bool AppDelegate::applicationDidFinishLaunching() {
     
     GameConfig::sharedInstance()->loadFilePaths();
     GameConfig::sharedInstance()->load();
+    
+    Localized::load();
+    
+    CCLOG("%s", Localized::getString("hi").c_str());
 
     // create a scene. it's an autorelease object
     Scene *scene = GameLayer::scene();

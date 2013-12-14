@@ -1,0 +1,21 @@
+{
+    "strings": {
+        "play": "play",
+        "challengeAFriend": "challenge a friend",
+        "paused": "paused",
+        "resume": "resume",
+        "quit": "quit",
+        "puzzleSolved": "puzzle solved",
+        "timeUp": "time up",
+        "nextPuzzle": "next puzzle",
+        "settings": "settings",
+        "soundCaption": "sound",
+        "musicCaption": "music",
+        "language": "english",
+        "notificationMessage": "Free hints available!",
+        "notificationBtnCaption": "Play",
+        "pvpComingSoon": "coming\nsoon",
+        "facebookMessage": "Hm.. I'm kind of addicted to this game lol :D",
+        "twitterMessage": "Hm.. I'm kind of addicted to this game lol :D"
+    }
+}

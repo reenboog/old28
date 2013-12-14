@@ -33,6 +33,7 @@
 		B84A78F1185BEFCD0088F5E7 /* GameConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B84A78EF185BEFCD0088F5E7 /* GameConfig.cpp */; };
 		B84A78F5185BF04F0088F5E7 /* Shared.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B84A78F3185BF04F0088F5E7 /* Shared.cpp */; };
 		B84A78F7185BF0AC0088F5E7 /* rapidjson in Resources */ = {isa = PBXBuildFile; fileRef = B84A78F6185BF0AC0088F5E7 /* rapidjson */; };
+		B84A78FB185C06AC0088F5E7 /* Localized.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B84A78F9185C06AC0088F5E7 /* Localized.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -203,6 +204,8 @@
 		B84A78F3185BF04F0088F5E7 /* Shared.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Shared.cpp; path = ../Classes/Shared.cpp; sourceTree = "<group>"; };
 		B84A78F4185BF04F0088F5E7 /* Shared.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Shared.h; path = ../Classes/Shared.h; sourceTree = "<group>"; };
 		B84A78F6185BF0AC0088F5E7 /* rapidjson */ = {isa = PBXFileReference; lastKnownFileType = folder; name = rapidjson; path = ../Classes/rapidjson; sourceTree = "<group>"; };
+		B84A78F9185C06AC0088F5E7 /* Localized.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Localized.cpp; path = ../Classes/Localized.cpp; sourceTree = "<group>"; };
+		B84A78FA185C06AC0088F5E7 /* Localized.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Localized.h; path = ../Classes/Localized.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -331,6 +334,8 @@
 		B84A78F2185BEFD10088F5E7 /* config */ = {
 			isa = PBXGroup;
 			children = (
+				B84A78F9185C06AC0088F5E7 /* Localized.cpp */,
+				B84A78FA185C06AC0088F5E7 /* Localized.h */,
 				B84A78F3185BF04F0088F5E7 /* Shared.cpp */,
 				B84A78F4185BF04F0088F5E7 /* Shared.h */,
 				B84A78EE185BEFCD0088F5E7 /* Constants.h */,
@@ -522,6 +527,7 @@
 			files = (
 				B84A78F5185BF04F0088F5E7 /* Shared.cpp in Sources */,
 				41BC70E415BF81A5006A0A6C /* AppController.mm in Sources */,
+				B84A78FB185C06AC0088F5E7 /* Localized.cpp in Sources */,
 				41BC70E815BF81A5006A0A6C /* main.m in Sources */,
 				B84A78F1185BEFCD0088F5E7 /* GameConfig.cpp in Sources */,
 				1AFAF8CA16D3886000DB1158 /* AppDelegate.cpp in Sources */,

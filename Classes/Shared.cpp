@@ -79,6 +79,6 @@ string Shared::languageShortNameForType(cocos2d::LanguageType type) {
             break;
     }
 
-    //return languagePrefix;
-    return "en";
+    return languagePrefix;
+    //return "en";
 }
