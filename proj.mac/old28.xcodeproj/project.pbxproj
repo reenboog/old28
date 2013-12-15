@@ -29,6 +29,7 @@
 		41BC70E615BF81A5006A0A6C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41BC70DE15BF81A5006A0A6C /* MainMenu.xib */; };
 		41BC70E715BF81A5006A0A6C /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 41BC70E015BF81A5006A0A6C /* Icon.icns */; };
 		41BC70E815BF81A5006A0A6C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BC70E115BF81A5006A0A6C /* main.m */; };
+		B8353C9D185D82FB004DF3E7 /* Quest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B8353C9B185D82FB004DF3E7 /* Quest.cpp */; };
 		B84A78ED185BECA30088F5E7 /* Res in Resources */ = {isa = PBXBuildFile; fileRef = B84A78EC185BECA30088F5E7 /* Res */; };
 		B84A78F1185BEFCD0088F5E7 /* GameConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B84A78EF185BEFCD0088F5E7 /* GameConfig.cpp */; };
 		B84A78F5185BF04F0088F5E7 /* Shared.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B84A78F3185BF04F0088F5E7 /* Shared.cpp */; };
@@ -197,6 +198,8 @@
 		41BC70E115BF81A5006A0A6C /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = SOURCE_ROOT; };
 		41BC70E215BF81A5006A0A6C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
 		41BC70E315BF81A5006A0A6C /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = SOURCE_ROOT; };
+		B8353C9B185D82FB004DF3E7 /* Quest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Quest.cpp; path = ../Classes/Quest.cpp; sourceTree = "<group>"; };
+		B8353C9C185D82FB004DF3E7 /* Quest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Quest.h; path = ../Classes/Quest.h; sourceTree = "<group>"; };
 		B84A78EC185BECA30088F5E7 /* Res */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Res; path = ../Res; sourceTree = "<group>"; };
 		B84A78EE185BEFCD0088F5E7 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = ../Classes/Constants.h; sourceTree = "<group>"; };
 		B84A78EF185BEFCD0088F5E7 /* GameConfig.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameConfig.cpp; path = ../Classes/GameConfig.cpp; sourceTree = "<group>"; };
@@ -243,6 +246,8 @@
 				1AFAF8C716D3886000DB1158 /* AppDelegate.h */,
 				1AFAF8C816D3886000DB1158 /* GameLayer.cpp */,
 				1AFAF8C916D3886000DB1158 /* GameLayer.h */,
+				B8353C9B185D82FB004DF3E7 /* Quest.cpp */,
+				B8353C9C185D82FB004DF3E7 /* Quest.h */,
 			);
 			name = Classes;
 			path = ../classes;
@@ -529,6 +534,7 @@
 				41BC70E415BF81A5006A0A6C /* AppController.mm in Sources */,
 				B84A78FB185C06AC0088F5E7 /* Localized.cpp in Sources */,
 				41BC70E815BF81A5006A0A6C /* main.m in Sources */,
+				B8353C9D185D82FB004DF3E7 /* Quest.cpp in Sources */,
 				B84A78F1185BEFCD0088F5E7 /* GameConfig.cpp in Sources */,
 				1AFAF8CA16D3886000DB1158 /* AppDelegate.cpp in Sources */,
 				1AFAF8CB16D3886000DB1158 /* GameLayer.cpp in Sources */,

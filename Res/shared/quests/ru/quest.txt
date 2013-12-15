@@ -6,114 +6,151 @@
         [
             {
                 "caption": "0x2fkhee",
-                "action": 
-                {
-                    "applyStats": 
-                    {
-                        "money": 0,
-                        "health": 100,
-                        "kindness": 10,
-                        "socials": 0,
-                        "gen": 0,
-                        "age": 6
-                    },
-
-                    "goTo": 
-                    {
-                        "default": 
+                "transitions":
+                {                    
+                    "variants":
+                    [
                         {
                             "message": "Что ж, средненько, но неплохое такое начало.",
-                            "key": 1
-                        },
-                        "variants":
-                        [
+                            "key": 1,
+                            "applyStats": 
                             {
-                                "key": 2,
-                                "message": "Кажется, кто-то выбрал сторону добра.",
-                                "requiredBiggerThan": 
+                                "money": 0,
+                                "health": 100,
+                                "kindness": 10,
+                                "socials": 0,
+                                "gen": 0,
+                                "age": 6
+                            }
+                        },
+
+                        {
+                            "key": 2,
+                            "message": "Кажется, кто-то выбрал сторону добра.",
+                            "requiredOptions":
+                            {
+                                "biggThan": 
                                 {
                                     "kindness": 20
                                 }
                             },
-
+                            
+                            "applyStats":
                             {
-                                "key": 3,
-                                "message": "Ох, зря.. этот ген часто приводит к слабому\nфизическому развитию.",
-                                "requiredLessThan": 
+                                "money": 0,
+                                "health": 100,
+                                "kindness": 10,
+                                "socials": 0,
+                                "gen": 0,
+                                "age": 6
+                            }
+                        },
+
+                        {
+                            "key": 3,
+                            "message": "Ох, зря.. этот ген часто приводит к слабому\nфизическому развитию.",
+                            "requiredOptions":
+                            {
+                                "lessThan": 
                                 {
                                     "health": 60
                                 }
+                            },
+                            "applyStats":
+                            {
+                                "money": 0,
+                                "health": 100,
+                                "kindness": 10,
+                                "socials": 0,
+                                "gen": 0,
+                                "age": 6
                             }
-                        ]
-                    }
+                        }
+                    ]
                 }
             },
 
             {
                 "caption": "0x000000",
-                "action": 
+                "transitions": 
                 {
-                    "applyStats": 
-                    {
-                        "money": 0,
-                        "health": 0,
-                        "kindness": 0,
-                        "socials": 0,
-                        "gen": 1
-                    },
-
-                    "goTo": 
-                    {
-                        "default": 
+                    "variants":
+                    [
                         {
                             "message": "Это плохой ген. Ты умер при рождении.",
-                            "key": -1
+                            "key": -1,
+                            "applyStats": 
+                            {
+                                "money": 0,
+                                "health": 0,
+                                "kindness": 0,
+                                "socials": 0,
+                                "gen": 1
+                            }
                         }
-                    }
+                    ]
                 }
             },
 
             {
                 "caption": "0xff0000",
-                "action": 
+                "transitions": 
                 {
-                    "applyStats": 
-                    {
-                        "money": 100,
-                        "health": 50,
-                        "kindness": 10,
-                        "socials": 50,
-                        "gen": 2
-                    },
-
-                    "goTo": 
-                    {
-                        "default": 
+                    "variants":
+                    [
                         {
                             "message": "Что ж, средненько, но неплохое такое начало.",
-                            "key": 1
-                        },
-                        "variants":
-                        [
+                            "key": 1,
+                            "applyStats": 
                             {
-                                "key": 2,
-                                "message": "Кажется, кто-то выбрал сторону добра.",
-                                "requiredBiggerThan": 
+                                "money": 100,
+                                "health": 50,
+                                "kindness": 10,
+                                "socials": 50,
+                                "gen": 2
+                            }
+                        },
+                    
+                        {
+                            "key": 2,
+                            "message": "Кажется, кто-то выбрал сторону добра.",
+                            "requiredOptions":
+                            {
+                                "biggerThan": 
                                 {
                                     "kindness": 20
                                 }
                             },
-
+                            "applyStats": 
                             {
-                                "key": 3,
-                                "message": "Ох, зря.. этот ген часто приводит к слабому\nфизическому развитию.",
-                                "requiredLessThan": 
+                                "money": 100,
+                                "health": 50,
+                                "kindness": 10,
+                                "socials": 50,
+                                "gen": 2
+                            }
+                        },
+
+                        {
+                            "key": 3,
+                            "message": "Ох, зря.. этот ген часто приводит к слабому\nфизическому развитию.",
+                            "requiredOptions":
+                            {
+                                "lessThan": 
                                 {
                                     "health": 60
                                 }
+                            },
+                            "applyStats": 
+                            {
+                                "money": 100,
+                                "health": 50,
+                                "kindness": 10,
+                                "socials": 50,
+                                "gen": 2
                             }
-                        ]
-                    }
+                        }
+                    ]
                 }
             }
         ]
@@ -126,47 +163,43 @@
         [
             {
                 "caption": "поймать ее",
-                "action": 
+                "transitions": 
                 {
-                    "applyStats": 
-                    {
-                        "money": 0,
-                        "health": 0,
-                        "kindness": -20,
-                        "socials": 0
-                    },
-
-                    "goTo": 
-                    {
-                        "default": 
+                    "variants":
+                    [
                         {
                             "message": "На дороге тебя сбила машина. Отец с горя запил\nи сжог дом со всеми.",
-                            "key": -1
+                            "key": -1,
+                            "applyStats": 
+                            {
+                                "money": 0,
+                                "health": 0,
+                                "kindness": -20,
+                                "socials": 0
+                            }
                         }
-                    }
+                    ]
                 }
             },
 
             {
                 "caption": "забить",
-                "action": 
+                "transitions": 
                 {
-                    "applyStats": 
-                    {
-                        "health": 0,
-                        "kindness": 10,
-                        "socials": 10,
-                        "money": 10
-                    },
-
-                    "goTo": 
-                    {
-                        "default": 
+                    "variants":
+                    [
                         {
                             "message": "Мудро, ведь взмах бабочки может вызвать цунами\nна другом краю земли.",
-                            "key": 2
+                            "key": 2,
+                            "applyStats": 
+                            {
+                                "health": 0,
+                                "kindness": 10,
+                                "socials": 10,
+                                "money": 10
+                            }
                         }
-                    }
+                    ]
                 }
             }
         ]
@@ -179,46 +212,42 @@
         [
             {
                 "caption": "дернуть",
-                "action": 
+                "transitions": 
                 {
-                    "applyStats": 
-                    {
-                        "health": 5,
-                        "money": 20,
-                        "kindness": -5,
-                        "socials": 30
-                    },
-
-                   "goTo": 
-                    {
-                        "default": 
+                    "variants":
+                    [
                         {
                             "message": "Упс, а это был мальчик, а не девочка. Бывает(",
-                            "key": 3
+                            "key": 3,
+                            "applyStats": 
+                            {
+                                "health": 5,
+                                "money": 20,
+                                "kindness": -5,
+                                "socials": 30
+                            }
                         }
-                    }
+                    ]
                 }
             },
 
             {
                 "caption": "дернуть слиьно",
-                "action": 
+                "transitions": 
                 {
-                    "applyStats": 
-                    {
-                        "health": -20,
-                        "kindness": -30,
-                        "socials": 40
-                    },
-
-                    "goTo": 
-                    {
-                        "default": 
+                    "variants":
+                    [
                         {
                             "message": "Ты отгреб от ее папы, но подружился с другой,\nболее умной девочкой.",
-                            "key": 3
+                            "key": 3,
+                            "applyStats": 
+                            {
+                                "health": -20,
+                                "kindness": -30,
+                                "socials": 40
+                            }
                         }
-                    }
+                    ]
                 }
             }
         ]
