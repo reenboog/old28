@@ -115,77 +115,32 @@
                         ]
                     }
                 }
-            },
+            }
         ]
     },
 
     {
         "key": 1,
-        "q": ":",
-        "answers": 
+        "q": "Ты увидел красивую бабочку и решил\nпобежать за ней:",
+        "answers":
         [
             {
-                "caption": "0x2fkhee",
-                "action": 
-                {
-                    "applyStats": 
-                    {
-                        "money": 0,
-                        "health": 100,
-                        "kindness": 10,
-                        "socials": 0,
-                        "gen": 0
-                    },
-
-                    "goTo": 
-                    {
-                        "default": 
-                        {
-                            "message": "Что ж, средненько, но неплохое такое начало.",
-                            "key": 1
-                        },
-                        "variants":
-                        [
-                            {
-                                "key": 2,
-                                "message": "Кажется, кто-то выбрал сторону добра.",
-                                "requiredBiggerThan": 
-                                {
-                                    "kindness": 20
-                                }
-                            },
-
-                            {
-                                "key": 3,
-                                "message": "Ох, зря.. этот ген часто приводит к слабому\nфизическому развитию.",
-                                "requiredLessThan": 
-                                {
-                                    "health": 60
-                                }
-                            }
-                        ]
-                    }
-                }
-            },
-
-            {
-                "caption": "0x000000",
+                "caption": "поймать ее",
                 "action": 
                 {
                     "applyStats": 
                     {
                         "money": 0,
                         "health": 0,
-                        "kindness": 0,
-                        "socials": 0,
-                        "gen": 1
+                        "kindness": -20,
+                        "socials": 0
                     },
 
                     "goTo": 
                     {
                         "default": 
                         {
-                            "message": "Это плохой ген. Ты умер при рождении.",
+                            "message": "На дороге тебя сбила машина. Отец с горя запил\nи сжог дом со всеми.",
                             "key": -1
                         }
                     }
@@ -193,48 +148,79 @@
             },
 
             {
-                "caption": "0xff0000",
+                "caption": "забить",
                 "action": 
                 {
                     "applyStats": 
                     {
-                        "money": 100,
-                        "health": 50,
+                        "health": 0,
                         "kindness": 10,
-                        "socials": 50,
-                        "gen": 2
+                        "socials": 10,
+                        "money": 10
                     },
 
                     "goTo": 
                     {
                         "default": 
                         {
-                            "message": "Что ж, средненько, но неплохое такое начало.",
-                            "key": 1
-                        },
-                        "variants":
-                        [
-                            {
-                                "key": 2,
-                                "message": "Кажется, кто-то выбрал сторону добра.",
-                                "requiredBiggerThan": 
-                                {
-                                    "kindness": 20
-                                }
-                            },
+                            "message": "Мудро, ведь взмах бабочки может вызвать цунами\nна другом краю земли.",
+                            "key": 2
+                        }
+                    }
+                }
+            }
+        ]
+    },
 
-                            {
-                                "key": 3,
-                                "message": "Ох, зря.. этот ген часто приводит к слабому\nфизическому развитию.",
-                                "requiredLessThan": 
-                                {
-                                    "health": 60
-                                }
-                            }
-                        ]
+    {
+        "key": 2,
+        "q": "В школе тебе понравилась девочка. Ты хочешь\nдернуть ее за косичку:",
+        "answers":
+        [
+            {
+                "caption": "дернуть",
+                "action": 
+                {
+                    "applyStats": 
+                    {
+                        "health": 5,
+                        "money": 20,
+                        "kindness": -5,
+                        "socials": 30
+                    },
+
+                   "goTo": 
+                    {
+                        "default": 
+                        {
+                            "message": "Упс, а это был мальчик, а не девочка. Бывает(",
+                            "key": 3
+                        }
                     }
                 }
             },
+
+            {
+                "caption": "дернуть слиьно",
+                "action": 
+                {
+                    "applyStats": 
+                    {
+                        "health": -20,
+                        "kindness": -30,
+                        "socials": 40
+                    },
+
+                    "goTo": 
+                    {
+                        "default": 
+                        {
+                            "message": "Ты отгреб от ее папы, но подружился с другой,\nболее умной девочкой.",
+                            "key": 3
+                        }
+                    }
+                }
+            }
         ]
     }
     
