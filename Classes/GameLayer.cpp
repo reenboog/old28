@@ -18,6 +18,9 @@ GameLayer::GameLayer() {
     socialsIcon = nullptr;
     iconsMenu = nullptr;
     
+    questionMount = nullptr;
+    questionLabel = nullptr;
+    
     leftBtn = nullptr;
     rightBtn = nullptr;
     decisionMenu = nullptr;
@@ -67,8 +70,16 @@ bool GameLayer::init() {
     
     this->addChild(iconsMenu);
     
-    // decision menu;
+    // question mount
+    questionMount = Sprite::create("questionMount.png");
+    this->addChild(questionMount);
     
+    questionLabel = LabelBMFont::create("Hello there!\n Wanna play a game?", "questionLabels.fnt");
+    questionLabel->setPosition(questionMount->getContentSize().width / 2, questionMount->getContentSize().height / 2);
+    questionLabel->setAlignment(Label::HAlignment::CENTER);
+    questionMount->addChild(questionLabel);
+    
+    // decision menu;
     leftBtn = MenuItemImage::create("decisionButton.png", "decisionButtonOn.png",
                                     CC_CALLBACK_0(GameLayer::onLeftDecisionBtnPressed, this));
     
@@ -91,6 +102,10 @@ bool GameLayer::init() {
     
     this->onDeviceOrientationChanged();
     
+    Sprite *baby = Sprite::create("baby.png");
+    this->addChild(baby);
+    baby->setPosition({designSize.width / 2, designSize.height / 2});
+    
     return true;
 }
 
@@ -103,11 +118,14 @@ void GameLayer::onDeviceOrientationChanged() {
     topMount->setAnchorPoint({0.5, 1});
     topMount->setPosition({origin.x + designSize.width / 2, origin.y + designSize.height});
     
+    // question mount
+    questionMount->setPosition({origin.x + designSize.width / 2, origin.y + designSize.height * 0.24});
+    
     // icons
     iconsMenu->setPosition({origin.x + designSize.width / 2, origin.y + designSize.height * 0.9});
 
     // decision menu
-    decisionMenu->setPosition({origin.x + designSize.width / 2, origin.y + designSize.height * 0.1});
+    decisionMenu->setPosition({origin.x + designSize.width / 2, origin.y + designSize.height * 0.07});
 }
 
 #pragma mark - callbacks

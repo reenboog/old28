@@ -13,14 +13,14 @@
      
         {
             "width": 1024,
-            "height": 600,
+            "height": 700,
             "designWidth": 1024,
-            "designHeight": 600,
+            "designHeight": 700,
             "paths":
             [
-                "Res/1024x600/fonts/",
-                "Res/1024x600/ui/",
-                "Res/1024x600/"
+                "Res/1024x700/fonts/",
+                "Res/1024x700/ui/",
+                "Res/1024x700/"
             ]
         }
      ],

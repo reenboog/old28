@@ -30,6 +30,10 @@ private:
     MenuItemImage *moneyIcon;
     MenuItemImage *socialsIcon;
     
+    // quesiton mount
+    Sprite *questionMount;
+    LabelBMFont *questionLabel;
+    
     // decision menu
     MenuItemImage *leftBtn;
     MenuItemImage *rightBtn;
