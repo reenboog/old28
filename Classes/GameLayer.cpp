@@ -2,11 +2,15 @@
 #include "GameLayer.h"
 #include "GameConfig.h"
 #include "Constants.h"
+#include "StatIcon.h"
+#include "Quest.h"
 
 USING_NS_CC;
 
 GameLayer::~GameLayer() {
-    
+    if(quest) {
+        delete quest;
+    }
 }
 
 GameLayer::GameLayer() {
@@ -24,6 +28,8 @@ GameLayer::GameLayer() {
     leftBtn = nullptr;
     rightBtn = nullptr;
     decisionMenu = nullptr;
+    
+    quest = nullptr;
 }
 
 Scene* GameLayer::scene() {
@@ -60,13 +66,16 @@ bool GameLayer::init() {
     this->addChild(topMount);
     
     // icons
-    kindnessIcon = MenuItemImage::create("kindnessIcon.png", "kindnessIcon.png");
-    healthIcon = MenuItemImage::create("healthIcon.png", "healthIcon.png");
-    moneyIcon = MenuItemImage::create("moneyIcon.png", "moneyIcon.png");
-    socialsIcon = MenuItemImage::create("socialsIcon.png", "socialsIcon.png");
+    kindnessIcon = StatIcon::create("kindnessIcon.png");
+    healthIcon = StatIcon::create("healthIcon.png");
+    moneyIcon = StatIcon::create("moneyIcon.png");
+    socialsIcon = StatIcon::create("socialsIcon.png");
     
-    iconsMenu = Menu::create(kindnessIcon, healthIcon, moneyIcon, socialsIcon, nullptr);
-    iconsMenu->alignItemsHorizontally();
+    iconsMenu = Node::create();
+    iconsMenu->addChild(kindnessIcon);
+    iconsMenu->addChild(healthIcon);
+    iconsMenu->addChild(moneyIcon);
+    iconsMenu->addChild(socialsIcon);
     
     this->addChild(iconsMenu);
     
@@ -106,7 +115,27 @@ bool GameLayer::init() {
     this->addChild(baby);
     baby->setPosition({designSize.width / 2, designSize.height / 2});
     
+    //
+    this->loadQuest();
+    
     return true;
+}
+
+void GameLayer::loadQuest() {
+    if(quest) {
+        delete quest;
+    }
+    
+    quest = new Quest();
+    quest->load("quest.txt");
+}
+
+void GameLayer::popUp() {
+    
+}
+
+void GameLayer::popOut() {
+    
 }
 
 void GameLayer::onDeviceOrientationChanged() {
@@ -119,10 +148,30 @@ void GameLayer::onDeviceOrientationChanged() {
     topMount->setPosition({origin.x + designSize.width / 2, origin.y + designSize.height});
     
     // question mount
-    questionMount->setPosition({origin.x + designSize.width / 2, origin.y + designSize.height * 0.24});
+    questionMount->setPosition({origin.x + designSize.width / 2, origin.y + designSize.height * 0.22});
     
     // icons
-    iconsMenu->setPosition({origin.x + designSize.width / 2, origin.y + designSize.height * 0.9});
+    float iconsPadding = 0;
+    float iconsWidth = -iconsPadding;
+    Object *icon = NULL;
+    CCARRAY_FOREACH(iconsMenu->getChildren(), icon) {
+        Node *child = dynamic_cast<Node*>(icon);
+        if(child) {
+            iconsWidth += child->getContentSize().width * child->getScaleX() + iconsPadding;
+        }
+    }
+    
+    float startX = -iconsWidth / 2.0f;
+    icon = NULL;
+    CCARRAY_FOREACH(iconsMenu->getChildren(), icon) {
+        Node *child = dynamic_cast<Node*>(icon);
+        if(child) {
+            child->setPosition(Point(startX + child->getContentSize().width * child->getScaleX() / 2.0f, 0));
+            startX += child->getContentSize().width * child->getScaleX() + iconsPadding;
+        }
+    }
+
+    iconsMenu->setPosition({origin.x + designSize.width / 2, origin.y + designSize.height * 0.92});
 
     // decision menu
     decisionMenu->setPosition({origin.x + designSize.width / 2, origin.y + designSize.height * 0.07});

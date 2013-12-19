@@ -13,14 +13,14 @@
      
         {
             "width": 1024,
-            "height": 700,
+            "height": 768,
             "designWidth": 1024,
-            "designHeight": 700,
+            "designHeight": 768,
             "paths":
             [
-                "Res/1024x700/fonts/",
-                "Res/1024x700/ui/",
-                "Res/1024x700/"
+                "Res/1024x768/fonts/",
+                "Res/1024x768/ui/",
+                "Res/1024x768/"
             ]
         }
      ],
@@ -29,6 +29,7 @@
     [
         "Res/shared/audio/",
         "Res/shared/strings/",
+        "Res/shared/quests/",
         "Res/shared/",
         "Res/"
     ]

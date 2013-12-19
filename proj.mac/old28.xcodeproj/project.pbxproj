@@ -35,6 +35,7 @@
 		B84A78F5185BF04F0088F5E7 /* Shared.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B84A78F3185BF04F0088F5E7 /* Shared.cpp */; };
 		B84A78F7185BF0AC0088F5E7 /* rapidjson in Resources */ = {isa = PBXBuildFile; fileRef = B84A78F6185BF0AC0088F5E7 /* rapidjson */; };
 		B84A78FB185C06AC0088F5E7 /* Localized.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B84A78F9185C06AC0088F5E7 /* Localized.cpp */; };
+		B8A14226185EF86200C50B71 /* StatIcon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B8A14224185EF86200C50B71 /* StatIcon.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -209,6 +210,8 @@
 		B84A78F6185BF0AC0088F5E7 /* rapidjson */ = {isa = PBXFileReference; lastKnownFileType = folder; name = rapidjson; path = ../Classes/rapidjson; sourceTree = "<group>"; };
 		B84A78F9185C06AC0088F5E7 /* Localized.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Localized.cpp; path = ../Classes/Localized.cpp; sourceTree = "<group>"; };
 		B84A78FA185C06AC0088F5E7 /* Localized.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Localized.h; path = ../Classes/Localized.h; sourceTree = "<group>"; };
+		B8A14224185EF86200C50B71 /* StatIcon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StatIcon.cpp; path = ../Classes/StatIcon.cpp; sourceTree = "<group>"; };
+		B8A14225185EF86200C50B71 /* StatIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatIcon.h; path = ../Classes/StatIcon.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +249,8 @@
 				1AFAF8C716D3886000DB1158 /* AppDelegate.h */,
 				1AFAF8C816D3886000DB1158 /* GameLayer.cpp */,
 				1AFAF8C916D3886000DB1158 /* GameLayer.h */,
+				B8A14224185EF86200C50B71 /* StatIcon.cpp */,
+				B8A14225185EF86200C50B71 /* StatIcon.h */,
 				B8353C9B185D82FB004DF3E7 /* Quest.cpp */,
 				B8353C9C185D82FB004DF3E7 /* Quest.h */,
 			);
@@ -532,6 +537,7 @@
 			files = (
 				B84A78F5185BF04F0088F5E7 /* Shared.cpp in Sources */,
 				41BC70E415BF81A5006A0A6C /* AppController.mm in Sources */,
+				B8A14226185EF86200C50B71 /* StatIcon.cpp in Sources */,
 				B84A78FB185C06AC0088F5E7 /* Localized.cpp in Sources */,
 				41BC70E815BF81A5006A0A6C /* main.m in Sources */,
 				B8353C9D185D82FB004DF3E7 /* Quest.cpp in Sources */,

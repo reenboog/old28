@@ -32,18 +32,18 @@ struct StatGroup {
     }
     
     StatGroup() {
-        this->addStat(ST_Money, 0);
-        this->addStat(ST_Health, 0);
-        this->addStat(ST_Kindness, 0);
-        this->addStat(ST_Socials, 0);
-        this->addStat(ST_Gen, 0);
-        this->addStat(ST_Age, 5);
+//        this->addStat(ST_Money, 0);
+//        this->addStat(ST_Health, 0);
+//        this->addStat(ST_Kindness, 0);
+//        this->addStat(ST_Socials, 0);
+//        this->addStat(ST_Gen, 0);
+//        this->addStat(ST_Age, 5);
     }
     
     void addStat(StatType type, int value) {
-        for(auto it = stats.begin(); it != stats.end(); ++it) {
-            stats[type] = value;
-        }
+        //for(auto it = stats.begin(); it != stats.end(); ++it) {
+        stats[type] = value;
+        //}
     }
     
     void apply(const StatGroup &src) {
@@ -74,6 +74,12 @@ struct TransitionOption {
     int value;
     CompareType compareType;
     StatType statType;
+    
+//    TransitionOption(int value, CompareType compareType, StatType statType) {
+//        this->value = value;
+//        this->compareType = compareType;
+//        this->statType = statType;
+//    }
     
     bool test(int valueToCompare) {
         switch(compareType) {
@@ -131,10 +137,20 @@ struct QuestAnswer {
 
 typedef vector<QuestAnswer> QuestAnswerPool;
 
-struct Quest {
+struct QuestEntry {
     int key;
     string question;
     QuestAnswerPool answers;
+};
+
+typedef vector<QuestEntry> QuestEntryPool;
+
+class Quest {
+public:
+    void load(string file);
+    const QuestAnswerTransition& apply(string caption);
+private:
+    QuestEntryPool entries;
 };
 
 #endif /* defined(__old28__Quest__) */

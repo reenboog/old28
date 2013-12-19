@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F9E8C7C8-F47F-426D-96A8-77DF376A0AC6</string>
+	<key>IDESourceControlProjectName</key>
+	<string>old28</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>3BC6839C-792E-4960-A328-DDEC8456712B</key>
+		<string>https://github.com/reenboog/old28.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>proj.mac/old28.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>3BC6839C-792E-4960-A328-DDEC8456712B</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/reenboog/old28.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>3BC6839C-792E-4960-A328-DDEC8456712B</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3BC6839C-792E-4960-A328-DDEC8456712B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>old28</string>
+		</dict>
+	</array>
+</dict>
+</plist>

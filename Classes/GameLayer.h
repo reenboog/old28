@@ -5,6 +5,9 @@
 
 USING_NS_CC;
 
+class Quest;
+class StatIcon;
+
 class GameLayer: public Layer {
 public:
     // init
@@ -21,14 +24,20 @@ public:
     // callbacks
     void onLeftDecisionBtnPressed();
     void onRightDecisionBtnPressed();
+    
+    void loadQuest();
+    
+    // animations
+    void popUp();
+    void popOut();
 private:
     // top mount
     Sprite *topMount;
     // icons
-    MenuItemImage *kindnessIcon;
-    MenuItemImage *healthIcon;
-    MenuItemImage *moneyIcon;
-    MenuItemImage *socialsIcon;
+    StatIcon *kindnessIcon;
+    StatIcon *healthIcon;
+    StatIcon *moneyIcon;
+    StatIcon *socialsIcon;
     
     // quesiton mount
     Sprite *questionMount;
@@ -39,7 +48,10 @@ private:
     MenuItemImage *rightBtn;
     Menu *decisionMenu;
     
-    Menu *iconsMenu;
+    Node *iconsMenu;
+    
+    // quest
+    Quest *quest;
 };
 
 #endif // __HELLOWORLD_SCENE_H__

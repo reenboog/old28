@@ -29,7 +29,7 @@
                             "message": "Кажется, кто-то выбрал сторону добра.",
                             "requiredOptions":
                             {
-                                "biggThan": 
+                                "biggerThan": 
                                 {
                                     "kindness": 20
                                 }
