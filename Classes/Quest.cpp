@@ -12,6 +12,10 @@
 
 USING_NS_CC;
 
+Quest::Quest() {
+    currentEntryKey = -1;
+}
+
 void Quest::load(string file) {
     unsigned long questDataSize = 0;
     unsigned char *t = (FileUtils::getInstance()->getFileData(file.c_str(), "r", &questDataSize));
@@ -33,8 +37,8 @@ void Quest::load(string file) {
             if(currentEntry.IsObject()) {
                 QuestEntry questEntry;
                 
-                questEntry.key = currentEntry["key"].GetInt();
-                questEntry.question = currentEntry["q"].GetString();
+                questEntry.setKey(currentEntry["key"].GetInt());
+                questEntry.setQuestion(currentEntry["q"].GetString());
                 
                 const auto &answers = currentEntry["answers"];
                 
@@ -45,7 +49,7 @@ void Quest::load(string file) {
                         if(currentAnswer.IsObject()) {
                             QuestAnswer questAnswer;
                             
-                            questAnswer.caption = currentAnswer["caption"].GetString();
+                            questAnswer.setCaption(currentAnswer["caption"].GetString());
                             const auto &answerTransitions = currentAnswer["transitions"];
                             
                             if(answerTransitions.IsObject()) {
@@ -57,8 +61,8 @@ void Quest::load(string file) {
                                         
                                         if(currentVariant.IsObject()) {
                                             QuestAnswerTransition currentQuestTransition;
-                                            currentQuestTransition.message = currentVariant["message"].GetString();
-                                            currentQuestTransition.key = currentVariant["key"].GetInt();
+                                            currentQuestTransition.setMessage(currentVariant["message"].GetString());
+                                            currentQuestTransition.setKey(currentVariant["key"].GetInt());
                                             
                                             const auto &variantApplyStats = currentVariant["applyStats"];
                                             
@@ -89,14 +93,14 @@ void Quest::load(string file) {
                                                     int statValue = variantStatIt->value.GetInt();
                                                     
                                                     StatType statType = statNameToEnum(statName);
-                                                    currentQuestTransition.statsToApply.addStat(statType, statValue);
+                                                    currentQuestTransition.addStatToApply(statType, statValue);
                                                 }
                                             }
                                             
                                             //TransitionOptionPool transitionOptions;
                                             
                                             auto applyOption = [&](CompareType compareType, StatType statType, int value) {
-                                                currentQuestTransition.requiredOptions.push_back({value, compareType, statType});
+                                                currentQuestTransition.addRequiredOptions(compareType, statType, value);
                                             };
                                             
                                             const auto &currentVariantOptions = currentVariant["requiredOptions"];
@@ -133,14 +137,14 @@ void Quest::load(string file) {
 
                                             }
                                             
-                                            questAnswer.transitions.push_back(currentQuestTransition);
+                                            questAnswer.addTransition(currentQuestTransition);
                                         }
                                     }
                                     
                                 }
                             }
                             
-                            questEntry.answers.push_back(questAnswer);
+                            questEntry.addAnswer(questAnswer);
                         }
                     }
                 }
@@ -165,6 +169,16 @@ void Quest::load(string file) {
     }
 }
 
-const QuestAnswerTransition& Quest::apply(string caption) {
-    return QuestAnswerTransition();
+const QuestAnswerTransition& Quest::applyAnswer(int answerKey, const StatGroup &stats) {
+    CCLOG("quest::applyAnswer(%i)", answerKey);
+    return entries[currentEntryKey].applyAnswer(answerKey, stats);
+}
+
+const QuestEntry& Quest::visitEntryByKey(int key) {
+    currentEntryKey = key;
+    return entries[key];
+}
+
+const QuestEntry& Quest::start() {
+    return this->visitEntryByKey(0);
 }

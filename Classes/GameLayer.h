@@ -2,11 +2,12 @@
 #define __HELLOWORLD_SCENE_H__
 
 #include "cocos2d.h"
+#include "Quest.h"
+
+class StatIcon;
+class QuoteCloud;
 
 USING_NS_CC;
-
-class Quest;
-class StatIcon;
 
 class GameLayer: public Layer {
 public:
@@ -24,8 +25,13 @@ public:
     // callbacks
     void onLeftDecisionBtnPressed();
     void onRightDecisionBtnPressed();
+    void onDecisionMade(int key);
+    
+    void onPlayerDead();
     
     void loadQuest();
+    void visitQuestEntry(const QuestEntry &entry);
+    //void transitToQuestEntry(const QuestAnswerTransition& transition);
     
     // animations
     void popUp();
@@ -43,9 +49,15 @@ private:
     Sprite *questionMount;
     LabelBMFont *questionLabel;
     
+    QuoteCloud *answerMessage;
+    
+    StatGroup stats;
+    
     // decision menu
     MenuItemImage *leftBtn;
+    LabelBMFont *leftBtnLabel;
     MenuItemImage *rightBtn;
+    LabelBMFont *rightBtnLabel;
     Menu *decisionMenu;
     
     Node *iconsMenu;
